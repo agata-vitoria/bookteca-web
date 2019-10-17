@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Livro - Bookteca - Livros de qualidade que você não encontra na biblioteca.</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="node_modules/ladda/dist/ladda-themeless.min.css"/>
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+    <style media="screen">
+      .cor-do-erro {
+        color: #E20613;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">Bookteca</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Início</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="menu-drop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Cadastros <!--<p class='meuErroCustomizado'></p>-->
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item active" href="livro.html">Livros</a>
+              <a class="dropdown-item" href="#">Usuários</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="jumbotron">
+      <h3 class="display-4">Cadastre um novo livro</h3>
+      <p class="lead">
+        Cadastre um novo livro para ficar disponível para consulta e empréstimos.
+      </p>
+    </div>
+    <div class="container">
+      <form id="formLivro" autocomplete="off">
+        <div class="row justify-content-center">
+          <div class="col-sm-12 col-md-6">
+            <div class="input-group m-1">
+              <input type="text" name="titulo" value="" class="form-control" placeholder="Qual o título do livro?" required="required"/><!--o error está aqui-->
+            </div>
+            <div class="error"></div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="input-group m-1">
+              <input type="text" name="subtitulo" value="" class="form-control" placeholder="Qual o subtitulo do livro?"/>
+            </div>
+            <div class="error"></div>
+          </div>
+          <div class="col-sm-12 col-md-12">
+            <div class="input-group m-1">
+              <textarea rows="8" type="text" name="descricao" value="" class="form-control" placeholder="Qual a descrição?" required="required"></textarea>
+            </div>
+            <div class="error"></div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end">
+          <button type="submit" class="btn btn-primary mt-5" id="cadastrar">Cadastrar</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script type="text/javascript" src="node_modules/ladda/dist/spin.min.js">
+  </script>
+  <script type="text/javascript" src="node_modules/ladda/dist/ladda.min.js">
+  </script>
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js">
+  </script>
+  <script type="text/javascript" src="node_modules/jquery-validation/dist/jquery.validate.min.js">
+  </script>
+  <script type="text/javascript" src="livro.js"></script>
+</html>

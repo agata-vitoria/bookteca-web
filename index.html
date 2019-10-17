@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Início - Bookteca - Livros de qualidade que você não encontra na biblioteca.</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="index.css"/>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Bookteca</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Início</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menu-drop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Cadastros
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="livro.html">Livros</a>
+              <a class="dropdown-item" href="#">Usuários</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row" id="listagem">
+        <!-- Os dados serão carregados pelo JavaScript, por isso essa div fica vazia-->
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js">
+  </script>
+  <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js">
+  </script>
+  <script type="text/javascript" src="index.js"></script>
+</html>
